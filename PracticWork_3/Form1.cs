@@ -16,16 +16,16 @@ namespace PracticWork_3
                 var typesOfPartner = db.TypesOfPartners.ToList();
                 var typesOfProduct = db.TypesOfProducts.ToList();
 
-                textBoxPartners.Text = String.Empty;
+                textBoxPartners.Text = string.Format("{0,-3}{1,-5}", "Id", "Types") + Environment.NewLine;
                 foreach (TypesOfPartner type in typesOfPartner)
                 {
-                    textBoxPartners.Text += string.Format("{0}{1,5}", type.Id, type.TypeOfPartner) + Environment.NewLine;
+                    textBoxPartners.Text += string.Format("{0,-3}{1,-5}", type.Id, type.TypeOfPartner) + Environment.NewLine;
                 }
 
-                textBoxProducts.Text = String.Empty;
+                textBoxProducts.Text = String.Format("{0,-3}{1,-25}{2,-5}", "Id", "Types", "Coefficent") + Environment.NewLine; ;
                 foreach (TypesOfProduct type in typesOfProduct)
                 {
-                    textBoxProducts.Text += string.Format("{0}{1,25}\t{2,5}", type.Id, type.TypeOfProduct, type.TypeCoefficent) + Environment.NewLine;
+                    textBoxProducts.Text += string.Format("{0,-3}{1,-25}{2,-5}", type.Id, type.TypeOfProduct, type.TypeCoefficent) + Environment.NewLine;
                 }
             }
         }
