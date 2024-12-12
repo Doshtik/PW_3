@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
-            listBoxPartners = new ListBox();
+            textBoxPartners = new TextBox();
             textBox1 = new TextBox();
-            listBoxProducts = new ListBox();
+            textBoxProducts = new TextBox();
             textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -47,27 +47,27 @@
             // 
             // splitContainer1.Panel1
             // 
-            splitContainer1.Panel1.Controls.Add(listBoxPartners);
+            splitContainer1.Panel1.Controls.Add(textBoxPartners);
             splitContainer1.Panel1.Controls.Add(textBox1);
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.Controls.Add(listBoxProducts);
+            splitContainer1.Panel2.Controls.Add(textBoxProducts);
             splitContainer1.Panel2.Controls.Add(textBox2);
             splitContainer1.Size = new Size(1257, 750);
             splitContainer1.SplitterDistance = 637;
             splitContainer1.TabIndex = 0;
             // 
-            // listBoxPartners
+            // textBoxPartners
             // 
-            listBoxPartners.Dock = DockStyle.Fill;
-            listBoxPartners.FormattingEnabled = true;
-            listBoxPartners.ItemHeight = 25;
-            listBoxPartners.Location = new Point(0, 30);
-            listBoxPartners.MultiColumn = true;
-            listBoxPartners.Name = "listBoxPartners";
-            listBoxPartners.Size = new Size(637, 720);
-            listBoxPartners.TabIndex = 3;
+            textBoxPartners.AcceptsTab = true;
+            textBoxPartners.Dock = DockStyle.Fill;
+            textBoxPartners.Location = new Point(0, 30);
+            textBoxPartners.Multiline = true;
+            textBoxPartners.Name = "textBoxPartners";
+            textBoxPartners.ReadOnly = true;
+            textBoxPartners.Size = new Size(637, 720);
+            textBoxPartners.TabIndex = 1;
             // 
             // textBox1
             // 
@@ -80,16 +80,16 @@
             textBox1.Text = "Типы Партнеров";
             textBox1.TextAlign = HorizontalAlignment.Center;
             // 
-            // listBoxProducts
+            // textBoxProducts
             // 
-            listBoxProducts.Dock = DockStyle.Fill;
-            listBoxProducts.FormattingEnabled = true;
-            listBoxProducts.ItemHeight = 25;
-            listBoxProducts.Location = new Point(0, 30);
-            listBoxProducts.MultiColumn = true;
-            listBoxProducts.Name = "listBoxProducts";
-            listBoxProducts.Size = new Size(616, 720);
-            listBoxProducts.TabIndex = 2;
+            textBoxProducts.AcceptsTab = true;
+            textBoxProducts.Dock = DockStyle.Fill;
+            textBoxProducts.Location = new Point(0, 30);
+            textBoxProducts.Multiline = true;
+            textBoxProducts.Name = "textBoxProducts";
+            textBoxProducts.ReadOnly = true;
+            textBoxProducts.Size = new Size(616, 720);
+            textBoxProducts.TabIndex = 2;
             // 
             // textBox2
             // 
@@ -128,7 +128,7 @@
         private SplitContainer splitContainer1;
         private TextBox textBox1;
         private TextBox textBox2;
-        private ListBox listBoxProducts;
-        private ListBox listBoxPartners;
+        private TextBox textBoxPartners;
+        private TextBox textBoxProducts;
     }
 }

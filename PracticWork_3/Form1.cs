@@ -14,19 +14,19 @@ namespace PracticWork_3
         {
             using (ApplicationContext db = new ApplicationContext())
             {
-                var typesOfPartner = db.TypesOfPartner.ToList();
-                var typesOfProduct = db.TypesOfProduct.ToList();
+                var typesOfPartner = db.TypesOfPartners.ToList();
+                var typesOfProduct = db.TypesOfProducts.ToList();
 
-                listBoxPartners.Text = String.Empty;
+                textBoxPartners.Text = String.Empty;
                 foreach (TypesOfPartner type in typesOfPartner)
                 {
-                    listBoxPartners.Text += $"{type.Id}\t{type.TypeOfPartner}\n";
+                    textBoxPartners.Text += string.Format("{0}{1,5}", type.Id, type.TypeOfPartner) + Environment.NewLine;
                 }
 
-                listBoxProducts.Text = String.Empty;
+                textBoxProducts.Text = String.Empty;
                 foreach (TypesOfProduct type in typesOfProduct)
                 {
-                    listBoxProducts.Text += $"{type.Id}\t{type.TypeOfProduct}\n";
+                    textBoxProducts.Text += string.Format("{0}{1,25}\t{2,5}", type.Id, type.TypeOfProduct, type.TypeCoefficent) + Environment.NewLine;
                 }
             }
         }
