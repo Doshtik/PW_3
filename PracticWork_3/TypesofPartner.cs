@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PracticWork_3
+namespace PracticWork_3;
+
+public partial class TypesOfPartner
 {
-    public class TypesOfPartner
-    {
-        public int Id { get; set; }
-        public string TypeOfPartner { get; set; } = null!;
-    }
+    public int Id { get; set; }
+
+    public string TypeOfPartner { get; set; } = null!;
+
+    public virtual ICollection<Partner> Partners { get; set; } = new List<Partner>();
 }

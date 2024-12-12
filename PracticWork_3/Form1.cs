@@ -1,4 +1,5 @@
 using Microsoft.VisualBasic.ApplicationServices;
+using PracticWork_3.Models;
 
 namespace PracticWork_3
 {
@@ -25,7 +26,7 @@ namespace PracticWork_3
                 listBoxProducts.Text = String.Empty;
                 foreach (TypesOfProduct type in typesOfProduct)
                 {
-                    listBoxProducts.Text += $"{type.Id}\t{type.TypeOfPartner}\n";
+                    listBoxProducts.Text += $"{type.Id}\t{type.TypeOfProduct}\n";
                 }
             }
         }

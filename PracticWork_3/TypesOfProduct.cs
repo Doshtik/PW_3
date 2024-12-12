@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PracticWork_3
+namespace PracticWork_3;
+
+public partial class TypesOfProduct
 {
-    public class TypesOfProduct
-    {
-        public int Id { get; set; }
-        public string TypeOfPartner { get; set; } = null!;
-        public double TypeCoefficent { get; set; }
-    }
+    public int Id { get; set; }
+
+    public string TypeOfProduct { get; set; } = null!;
+
+    public decimal TypeCoefficent { get; set; }
+
+    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 }
