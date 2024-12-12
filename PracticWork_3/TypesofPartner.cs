@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PracticWork_3
 {
-    class TypesofPartner
+    public class TypesOfPartner
     {
         public int Id { get; set; }
-        public string TypeOfpartner { get; set; }
+        public string TypeOfPartner { get; set; } = null!;
     }
 }

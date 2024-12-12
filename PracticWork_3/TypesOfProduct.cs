@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace PracticWork_3
 {
-    class TypesOfProduct
+    public class TypesOfProduct
     {
         public int Id { get; set; }
-        public string TypeOfProduct { get; set; }
+        public string TypeOfPartner { get; set; } = null!;
         public double TypeCoefficent { get; set; }
     }
 }

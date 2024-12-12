@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
+            listBoxPartners = new ListBox();
             textBox1 = new TextBox();
             listBoxProducts = new ListBox();
             textBox2 = new TextBox();
-            listBoxPartners = new ListBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -57,6 +57,17 @@
             splitContainer1.Size = new Size(1257, 750);
             splitContainer1.SplitterDistance = 637;
             splitContainer1.TabIndex = 0;
+            // 
+            // listBoxPartners
+            // 
+            listBoxPartners.Dock = DockStyle.Fill;
+            listBoxPartners.FormattingEnabled = true;
+            listBoxPartners.ItemHeight = 25;
+            listBoxPartners.Location = new Point(0, 30);
+            listBoxPartners.MultiColumn = true;
+            listBoxPartners.Name = "listBoxPartners";
+            listBoxPartners.Size = new Size(637, 720);
+            listBoxPartners.TabIndex = 3;
             // 
             // textBox1
             // 
@@ -91,17 +102,6 @@
             textBox2.Text = "Типы Продукции";
             textBox2.TextAlign = HorizontalAlignment.Center;
             // 
-            // listBoxPartners
-            // 
-            listBoxPartners.Dock = DockStyle.Fill;
-            listBoxPartners.FormattingEnabled = true;
-            listBoxPartners.ItemHeight = 25;
-            listBoxPartners.Location = new Point(0, 30);
-            listBoxPartners.MultiColumn = true;
-            listBoxPartners.Name = "listBoxPartners";
-            listBoxPartners.Size = new Size(637, 720);
-            listBoxPartners.TabIndex = 3;
-            // 
             // FormTypes
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
@@ -113,6 +113,7 @@
             Name = "FormTypes";
             ShowIcon = false;
             Text = "Таблицы типов";
+            Load += FormTypes_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
